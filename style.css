@@ -1,0 +1,161 @@
+/* Reset */
+
+body {
+    margin: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Type */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.title,
+.subtitle {
+    text-align: center;
+}
+
+.title {
+    font-size: 3.5vw;
+    width: 50%;
+}
+
+.subtitle {
+    font-size: 1vw;
+    width: 50%;
+}
+
+.btn {
+    font-size: 1vw;
+    font-weight: 500;
+}
+
+.preview {
+    text-align: center;
+}
+
+.preview-title {
+    font-size: 30vh;
+    line-height: 0.8;
+}
+
+/* Color */
+
+body {
+    background-color: #5D6876;
+}
+
+.title {
+    background: linear-gradient(#d7a851, #8b5d20);
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    color: #968975;
+}
+
+.btn {
+    color: #fefdf8;
+    background-color: #483c2a;
+}
+
+.out .btn {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #d7a851;
+}
+
+.preview {
+    color: #f4eddb;
+}
+
+/* Layout */
+
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    overflow: hidden;
+}
+
+.container {
+    grid-column: 1;
+    grid-row: 1;
+
+    width: 90vw;
+    height: 45vw;
+
+    background: url(img/sale_banner.png) no-repeat;
+    background-size: 100%;
+
+    transition: translate 1s;
+}
+
+.container.out {
+    translate: -100vw;
+}
+
+.container-body {
+    width: 100%;
+    margin-top: 18.3%;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;;
+}
+
+.container-body > * {
+    margin-block: 0;
+}
+
+.title {
+    margin-bottom: 0.875vw;
+}
+
+.subtitle {
+    margin-bottom: 3.375vw;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+
+    border: none;
+    padding: 1vw;
+    border-radius: 100vh;
+
+    cursor: pointer;
+    transition: translate 1s;
+}
+
+.out .btn {
+    translate: 100vw;
+}
+
+.btn.hidden {
+    display: none;
+}
+
+.container.preview {
+    z-index: -1;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+
+    background: none;
+}
+
+.container.preview > * {
+    margin: 0;
+}
+
+.container.preview.out {
+    translate: 100vw;
+}
